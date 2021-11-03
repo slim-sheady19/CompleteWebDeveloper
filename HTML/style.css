@@ -1,0 +1,8 @@
+
+/*Cascading Style Sheet
+cascading = order of execution*/
+
+h2 {
+	color: red;
+	background-color: purple;
+}
