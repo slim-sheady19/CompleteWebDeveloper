@@ -6,12 +6,21 @@ https://css-tricks.com/
 https://css-tricks.com/almanac/
 */
 
+* {
+	text-align: right; /* the * does this for all elements but 
+	will not work for p elements below that get centred after this */
+}
+
 body {
 	background-image: url(bg.jpg);
 	background-size: cover;
 }
 
-h2 {
+h2, p { /* all elements h2 AND elements p
+h p        all elements p inside element h2
+h2 > p     all elements p inside element h2
+https://css-tricks.com/almanac/selectors/
+ */
 	color: #B15983;
 	text-align: center;
 	border: 5px solid rgba(255, 176, 170, 0.5); /* RGB + alpha*/
@@ -21,4 +30,20 @@ h2 {
 li {
 	list-style: none; /*remove dots next to link*/
 	display: inline-block;
+}
+
+.webtext {
+	border: 5px dashed green;
+}
+
+.active {
+	color: red; 
+}
+
+#div1 {
+	background-color: orange;
+}
+
+#div2 {
+	background: rgba();
 }
