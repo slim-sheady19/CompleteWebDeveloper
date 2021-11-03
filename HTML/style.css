@@ -1,8 +1,24 @@
 
 /*Cascading Style Sheet
-cascading = order of execution*/
+cascading = order of execution
+
+https://css-tricks.com/
+https://css-tricks.com/almanac/
+*/
+
+body {
+	background-image: url(bg.jpg);
+	background-size: cover;
+}
 
 h2 {
-	color: red;
-	background-color: purple;
+	color: #B15983;
+	text-align: center;
+	border: 5px solid rgba(255, 176, 170, 0.5); /* RGB + alpha*/
+	cursor: pointer;
+}
+
+li {
+	list-style: none; /*remove dots next to link*/
+	display: inline-block;
 }
