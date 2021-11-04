@@ -1,0 +1,27 @@
+
+
+.container {
+	display: flex; /*activate flexbox*/
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+h1 {
+	font-family: fantasy;
+	font-size: 3em;
+	border-bottom: 2px solid green;
+	border-right: 2px solid green;
+	width: 400px;
+	text-align: center;  /* aligned to centre of the width of 400px above*/
+}
+
+img {
+	width: 450px;
+	height: 300px;
+	margin: 10px;
+	transition: all 1s; /*all transition properties to take 1 second*/
+}
+
+img:hover { /*hover means when mouse touches it */
+	transform: scale(1.1);
+}
