@@ -1,7 +1,10 @@
 .container {
     display: grid;
-    grid-template-columns: 0.5fr 1.5fr 2fr; /* fr is FRACTION-> use most of the time      /* OR   25% 25% 25% 25%;    OR     300px 300px 300px;*/
+    /*grid-template-columns: 0.5fr 1.5fr 2fr; /* fr is FRACTION-> use most of the time      /* OR   25% 25% 25% 25%;    OR     300px 300px 300px;*/
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*most commonly used.  200px min and then 1fr when too small*/
     grid-gap: 20px;
+    grid-template-rows: 1fr;
+    /*justify-items: end; /*default is stretch which fills item to grid box*/
 }
 
 .zone {
