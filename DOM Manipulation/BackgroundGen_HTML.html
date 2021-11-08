@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+    <title>Gradient</title>
+    <link rel='stylesheet' type='text/css' href='BackgroundGen_Style.css'>
+</head>
+    <body id='gradient'>
+        <h1>Background Generator</h1>
+        <!-- colour pickers
+        can add oninput='setGradient()' after input below to call the function directly from this HTML file, skipping addEventListener step in js
+        ^ we do not generally do this to keep the js code sperated from HTML 'separation of concerns' -->
+        <input class='color1' type="color" name='color1' value='#00ff00'>
+        <input class='color2' type="color" name='color2' value='#ff0000'>
+        <h2>Current CSS Background</h2>
+        <h3></h3>
+
+        <script type="text/javascript" src='BackgroundGen_Script.js'></script>
+    </body>
+</html>
