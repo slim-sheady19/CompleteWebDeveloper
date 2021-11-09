@@ -16,6 +16,7 @@ newFunc();
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 
 //Currying
+//https://stackoverflow.com/questions/152005/how-can-currying-be-done-in-c
 const multiply = (a, b) => a * b;
 const curriedMultiply = (a) => (b) => a * b;
 const multiplyBy5 = curriedMultiply(5);
