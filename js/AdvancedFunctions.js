@@ -1,4 +1,7 @@
 //no more function keyword
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+//https://www.w3schools.com/js/js_arrow_function.asp
+
 
 const first = () => {
     const greet = 'Hi';
