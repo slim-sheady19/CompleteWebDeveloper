@@ -70,6 +70,6 @@ const newArray = arrayNum.map((num, i) => {
 	alert(num);
 	return num * 2;
 })
-//2 
+//2 just remmove the console log and alert
 
 //BONUS: create a new list with all user information, but add "!" to the end of each items they own.
