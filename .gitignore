@@ -4,3 +4,9 @@ HTML_CSS/AdvancedCSS/fish.jpeg
 HTML_CSS/AdvancedCSS/horse.jpeg
 HTML_CSS/AdvancedCSS/lemur.jpeg
 HTML_CSS/AdvancedCSS/monkey.jpeg
+
+robofriends_graphics/
+
+/node_modules/
+/dist/
+.parcel-cache
