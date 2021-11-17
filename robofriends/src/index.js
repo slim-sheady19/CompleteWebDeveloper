@@ -1,22 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; //we specify React-DOM here because React can be used in many other types of software dev.  this one specifies for web & browsers
 import './index.css';     //  ./ indicates the same directory.  so the same folder as index.js
-import App from './App';  // .js file is assumed as there is no other .
-import reportWebVitals from './reportWebVitals';  //advanced - don't worry.  testing?
 
-import Hello from './Hello';
 import 'tachyons';
+
+import Card from './Card';
+import {robots} from './robots'; //must destructure robots since robots.js does not export any default class
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* below we create a prop (property) called greeting which is a string*/}
-    <Hello greeting={'Hello, React Ninja'}/> 
-    <App />                 
+    <div>
+      {/* robots is an array, so we must access each element */}
+      <Card id={robots[0].id} name={robots[0].name} email={robots[0].email}/>
+      <Card id={robots[1].id} name={robots[1].name} email={robots[1].email}/>
+      <Card id={robots[2].id} name={robots[2].name} email={robots[2].email}/>
+    </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
