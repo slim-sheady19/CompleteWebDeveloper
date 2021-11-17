@@ -2,6 +2,7 @@ import React from 'react';
 import Cardlist from './Cardlist';
 import {robots} from './robots'; //must destructure robots since robots.js does not export any default class
 import SearchBox from './SearchBox';
+import './App.css';
 
 class App extends React.Component { //App class declared here (child of React.Component class) has a state variable
                                     //with props robots and searchfield accessible by all children
