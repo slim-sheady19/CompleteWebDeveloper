@@ -3,18 +3,14 @@ import ReactDOM from 'react-dom'; //we specify React-DOM here because React can 
 import './index.css';     //  ./ indicates the same directory.  so the same folder as index.js
 
 import 'tachyons';
-
-import Card from './Card';
+import Cardlist from './Cardlist';
 import {robots} from './robots'; //must destructure robots since robots.js does not export any default class
 
 ReactDOM.render(
+  // https://reactjs.org/docs/strict-mode.html
   <React.StrictMode>
-    <div>
-      {/* robots is an array, so we must access each element */}
-      <Card id={robots[0].id} name={robots[0].name} email={robots[0].email}/>
-      <Card id={robots[1].id} name={robots[1].name} email={robots[1].email}/>
-      <Card id={robots[2].id} name={robots[2].name} email={robots[2].email}/>
-    </div>
+    {/* construct an object of class Cardlist called robots with argument robots, which is an array called robots from robots.js */}
+    <Cardlist robots={robots}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
