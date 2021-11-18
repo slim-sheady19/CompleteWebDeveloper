@@ -3,6 +3,7 @@ import Cardlist from './Cardlist';
 import {robots} from './robots'; //must destructure robots since robots.js does not export any default class
 import SearchBox from './SearchBox';
 import './App.css';
+import Scroll from './Scroll';
 
 class App extends React.Component { //App class declared here (child of React.Component class) has a state variable
                                     //with props robots and searchfield accessible by all children
@@ -39,9 +40,12 @@ class App extends React.Component { //App class declared here (child of React.Co
         return (
             <div className='tc'>
                 <h1>RoboFriends</h1>
+                
                 <SearchBox searchChange={this.onSearchChange}/> 
-                {/* construct an object of class Cardlist called robots with argument filteredRobots */}
-                <Cardlist robots={filteredRobots}/>
+                <Scroll>
+                    {/* construct an object of class Cardlist called robots with argument filteredRobots */}
+                    <Cardlist robots={filteredRobots}/>
+                </Scroll>
             </div>
         );
     };
