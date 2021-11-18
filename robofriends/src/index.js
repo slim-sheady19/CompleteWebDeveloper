@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'; //we specify React-DOM here because React can 
 import './index.css';     //  ./ indicates the same directory.  so the same folder as index.js
 
 import 'tachyons';
-import App from './App';
+import App from './containers/App';
 
 ReactDOM.render(
   // https://reactjs.org/docs/strict-mode.html

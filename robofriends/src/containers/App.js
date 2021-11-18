@@ -1,9 +1,9 @@
 import React from 'react';
-import Cardlist from './Cardlist';
-import {robots} from './robots'; //must destructure robots since robots.js does not export any default class
-import SearchBox from './SearchBox';
+import Cardlist from '../components/Cardlist';
+import {robots} from '../robots'; //must destructure robots since robots.js does not export any default class
+import SearchBox from '../components/SearchBox';
 import './App.css';
-import Scroll from './Scroll';
+import Scroll from '../components/Scroll';
 
 class App extends React.Component { //App class declared here (child of React.Component class) has a state variable
                                     //with props robots and searchfield accessible by all children
@@ -31,12 +31,18 @@ class App extends React.Component { //App class declared here (child of React.Co
 
     //render function is always called when components have mounted and whenever a change in state is detected
     render () {
+        const {robots, searchfield} = this.state; //destructure to use shorthand to access this.state.variables
+
         //create array of robots that are filtered with the search field text and changed dynamically.
         //it is created inside scope of render function to be accessed in return below
-        const filteredRobots = this.state.robots.filter(robot => {
-            return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        const filteredRobots = robots.filter(robot => {
+            return robot.name.toLowerCase().includes(searchfield.toLowerCase());
         })
         console.log(filteredRobots);
+        //show loading text while fetching robots.  the ! denotes null
+        if (!robots.length) {
+            return <h1>Loading</h1>
+        } else {
         return (
             <div className='tc'>
                 <h1>RoboFriends</h1>
@@ -47,7 +53,8 @@ class App extends React.Component { //App class declared here (child of React.Co
                     <Cardlist robots={filteredRobots}/>
                 </Scroll>
             </div>
-        );
+           );
+        }
     };
 }
 
